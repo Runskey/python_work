@@ -120,19 +120,20 @@ for csvpar_element in os.listdir(csvpar):
 #{
     if not csvpar_element.endswith(".csv"):
         continue
+    
+    # extract physical channel type from template file with name like config_dch.par
+    filename_dec = re.split('_|\.', csvpar_element)
+    if (len(filename_dec) != 3):
+        continue
+    ch_type = filename_dec[1]
+    
     csv_file = csv.reader(open(csvpar + os.sep + csvpar_element, 'rb'))
     # initialize test number
     test_number = 0
-
     for row in csv_file:
     #{
-        # line 1 physical channel type
+        # line 1 parameter name
         if (csv_file.line_num == 1):
-            ch_type = row[0]
-            continue
-        
-        # line 2 parameter name
-        if (csv_file.line_num == 2):
             param_name = row
             continue
         
@@ -157,17 +158,6 @@ for csvpar_element in os.listdir(csvpar):
             continue
         
         # create simulation directory
-#         if (sys.platform == "win32"):
-#             print('mkdir ' + testDirName + '; copy ' + pardir +'/*' + ch_type + '.par ' + testDirName)
-#             if not os.path.exists(testDirName):
-#                 os.mkdir(testDirName)
-#             os.system('copy '+ pardir + '\*' + ch_type + '.par ' + '"' + testDirName + '"')
-#         else:
-#             print('mkdir ' + testDirName + '; cp ' + pardir +'/*' + ch_type + '.par ' + testDirName + '/')
-#             if not os.path.exists(testDirName):
-#                 os.mkdir(testDirName)
-# #             os.system('cp '+ pardir + '/*' + ch_type + '.par ' + testDirName + '/')
-#             os.system('cp par_template_dir/*dch.par 3G_test_dch_1/')
         if not os.path.exists(testDirName):
             os.mkdir(testDirName)
             
