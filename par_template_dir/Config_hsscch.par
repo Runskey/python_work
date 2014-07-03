@@ -1,0 +1,32 @@
+VectorName              string ["3G_test_hsscch_1 "]    //change
+Description	        string ["HSSCCH testing"]  //change
+
+///////////////////////////////////////////////////
+//HSSCCH common parameters                       //
+///////////////////////////////////////////////////
+
+TrCh_Type               int     [134]
+
+cellId			int     [0]
+resourceId		int     [0]	 	
+scramblingCodeIndex     int     [0]
+chanCodeIndex           int     [6]
+PhyCh_Type		int     [9] 
+
+////////////////////////////////////////////////////
+// HSSCCH Dynamic message setting                        //
+////////////////////////////////////////////////////
+diversityMode           int             [1] 
+hRnti                   int             [0x1234]    //change
+hsscchType              int             [0]  //change
+xccs			int             [0]   //change
+xms                     int             [0] //QPSK  change
+pwi                     int             [0] //change
+harqProc                int             [0]  
+priRcv                  int             [0]  //change
+secRcv                  int             [0]   //change
+ndi                     int             [0]   
+priTbsi                 int             [0] //change
+secTbsi                 int             [0] //change
+
+hspdschActive           int     	[0]
