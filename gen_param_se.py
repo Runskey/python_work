@@ -137,33 +137,34 @@ for csvpar_element in os.listdir(csvpar):
             param_name = row
             continue
         
-        if (row[0] == '') or (row[1] == ''):
+        if (row[0] == ''):
             # this row is comment row.
             continue
         
         if (int(row[0]) >= int(rangeLow)) and (int(row[0]) <= int(rangeHigh)):
-            # create test directory name
-            # row[0] is test number
-            # row[1] is test directory name
-            # row[2] is comments for the tests
-            if (row[0] != test_number):
-                # for a new test we need initialize the channel index first
+            if (row[0] != '') and (row[0] != test_number):
+                # for a new test we need initialize the context variables
+                # row[0] is test number
+                # row[1] is test directory name, create if not exist
+                # row[2] is comments for the tests
+                test_number = row[0]
+                testDirName = row[1]
+                commentsName= row[2]
+                # reset channel index in a new test
                 ch_dic[ch_type] = 0
-            test_number  = row[0]
-            testDirName  = row[1]
-            commentsName = row[2]
+            
             ch_index = ch_dic[ch_type]
             print "Read csv file: {}, channel type is {} with index {}".format(csvpar_element, ch_type, ch_index)
         else:
             continue
         
-        # create simulation directory
+        # create simulation directory if it doesn't exist
         if not os.path.exists(testDirName):
             os.mkdir(testDirName)
-            
+        # copy template par file into the test directory
         shutil.copy(pardir+os.sep+'Config_'+ch_type+'.par', testDirName+os.sep)
         
-        # open parameter template file for modification
+        # open template par file for modification
         inputf  = open(testDirName + os.sep + 'Config_' + ch_type + '.par')
         outputf = open(testDirName + os.sep + 'temp.file', 'w')
         
@@ -172,6 +173,7 @@ for csvpar_element in os.listdir(csvpar):
         for line in inputf :
             str1 = pComment.sub(' ', line)
             lineList.append(str1)
+            
         # record the start/end position of each paire of brace recursively.
         # each unit represent one independent parameter class.
         parNameList = []
@@ -189,7 +191,7 @@ for csvpar_element in os.listdir(csvpar):
         offset = 0
         fandParlistRange(words)
         
-        # read the parameter line by line and generate one config.par accordingly
+        # read the parameter line by line and generate config.par accordingly
         # each line contains the description for one physical channel
         ii = -1
         for elem1 in row :
@@ -222,7 +224,7 @@ for csvpar_element in os.listdir(csvpar):
         inputf.close();
         outputf.close();
         
-        # generate parameter file and increase index of channel accordingly
+        # rename par file and increase index of channel accordingly
         os.remove(testDirName + os.sep + 'Config_' + ch_type + '.par')
         os.rename(testDirName + os.sep + 'temp.file', testDirName + os.sep + 'Config_' + ch_type + '_' + str(ch_index) + '.par')
         ch_dic[ch_type] += 1
