@@ -1,32 +1,71 @@
-VectorName          string ["3G_test_hsscch_1 "]    //change
-Description	        string ["HSSCCH testing"]  //change
+VectorName          string      ["3G_hspdsch_test_1"]    //change
+Description	        string      ["HS-DSCH QPSK Tranport Block Sizes (25.321 9.2.3.1)"]  //change
 
 ///////////////////////////////////////////////////
 //HSSCCH common parameters                       //
 ///////////////////////////////////////////////////
 
-TrCh_Type           int         [134]
-cellId			        int         [0]
-resourceId		      int         [0]	 	
-scramblingCodeIndex int         [0]
-chanCodeIndex       int         [6]
 PhyCh_Type		      int         [9] 
+TrCh_Type		        int         [134] 
+cellId		          int         [0]
+resourceId		      int         [0]	        //change
+scramblingCodeIndex	int         [0]	        //change
+chanCodeIndex       int         [6]
 
 ////////////////////////////////////////////////////
 // HSSCCH Dynamic message setting                 //
 ////////////////////////////////////////////////////
 
-diversityMode       int         [1] 
-hRnti               int         [0x1234]    //change
-hsscchType          int         [0]         //change
-xccs			          int         [0]         //change
-xms                 int         [0]         //QPSK  change
-pwi                 int         [0]         //change
-harqProc            int         [0]  
-priRcv              int         [0]         //change
-secRcv              int         [0]         //change
-ndi                 int         [0]   
+userId              int         [0]         //change
+diversityMode		    int         [1]         //change
+hsscchType		      int         [0]         //change
+xccs			          int         [0]           
+xms                 int         [0]         //QPSK 
 priTbsi             int         [0]         //change
 secTbsi             int         [0]         //change
+pwi			            int         [0]         //change
+harqProc            int         [0]  
+priRcv              int         [0]  
+secRcv              int         [0]   
+ndi                 int         [0]   
+hRnti			          int         [0x1234]    //change
 
-hspdschActive       int     	  [0]
+////////////////////////////////////////////////////
+// HSPDSCH Dynamic message setting                //
+////////////////////////////////////////////////////
+
+hspdschActive       int         [1]   
+mimoMode		        int         [0]         //change
+startCodeIndex		  int         [1]         //change
+numCodes		        int         [1]         //change
+crcAttachMethod		  int         [0]      	
+nIR			            int         [9600]      //change
+codePower		        int         [-600]      //change
+firstDescIsHdr		  int	        [0]
+numTBs			        int         [1]
+
+////////////////////////////////////////////////////
+// Two Transport Block                            //
+////////////////////////////////////////////////////
+
+TB_0 ParamList
+{
+   tbs			        int         [137]       //change
+   modType		      int         [0]         //change
+   rvCoding         int         [1]         //change
+   numDataDesc		  int         [3]         //change
+   blkSize		      Array<int>  [21, 336, 116]  //change
+   numBlks		      Array<int>  [1, 0, 1]   //change
+   bitOffsetFlag    Array<int>  [0, 1, 0]   //change
+}
+
+TB_1 ParamList
+{
+   tbs		  	      int         [137]       //change
+   modType		      int         [0]         //change
+   rvCoding         int         [1]         //change
+   numDataDesc		  int         [3]         //change
+   blkSize		      Array<int>  [21, 336, 116]  //change
+   numBlks		      Array<int>  [1, 0, 1]   //change
+   bitOffsetFlag    Array<int>  [0, 1, 0]   //change
+}
