@@ -1,0 +1,2 @@
+,,,VectorName,Description,UserId,resourceId,chanCodeIndex,hsscchType,hRnti,xccs,xms,pwi,priRcv,secRcv,priTbsi,secTbsi,startCodeIndex,numCodes,nIR,codePower,numTBs,TB_0.tbs,TB_0.modType,TB_0.rvCoding,TB_0.numDataDesc,TB_0.blkSize,TB_0.numBlks,TB_0.bitOffsetFlag,TB_1.tbs,TB_1.modType,TB_1.rvCoding,TB_1.numDataDesc,TB_1.blkSize,TB_1.numBlks,TB_1.bitOffsetFlag
+21,3G_test_multichan_21,HS-SCCH + HS-PDSCH,3G_test_multichan_21,HS-SCCH + HS-PDSCH,0,0,,0,0x1234,0,0,0,7,0,5,0,1,1,9600,-600,1,137,0,1,3,"21, 336, 116","1, 0, 1","0, 1, 0",0,0,0,0,0,0,0
