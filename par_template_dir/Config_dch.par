@@ -4,6 +4,7 @@ Description	        string      ["Stand-alone UL:3.4 DL:3.4 kbps SRBs for DCCH"]
 //UE common parameters
 UserId              int         [0]
 CellId		          int         [0]
+PhyCh_Type          int         [11]
 TrCh_Type		        int         [128]
 
 scramblingCodeIndex	int         [0]
