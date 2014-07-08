@@ -1,2 +1,18 @@
 ,,,VectorName,Description,UserId,resourceId,chanCodeIndex,hsscchType,hRnti,xccs,xms,pwi,priRcv,secRcv,priTbsi,secTbsi,startCodeIndex,numCodes,nIR,codePower,numTBs,TB_0.tbs,TB_0.modType,TB_0.rvCoding,TB_0.numDataDesc,TB_0.blkSize,TB_0.numBlks,TB_0.bitOffsetFlag,TB_1.tbs,TB_1.modType,TB_1.rvCoding,TB_1.numDataDesc,TB_1.blkSize,TB_1.numBlks,TB_1.bitOffsetFlag
-21,3G_test_multichan_21,HS-SCCH + HS-PDSCH,3G_test_multichan_21,HS-SCCH + HS-PDSCH,0,0,,0,0x1234,0,0,0,7,0,5,0,1,1,9600,-600,1,137,0,1,3,"21, 336, 116","1, 0, 1","0, 1, 0",0,0,0,0,0,0,0
+21,3G_test_multichan_21,"HS-DSCH QPSK, Single User, Full Rate",3G_test_multichan_21,"HS-DSCH QPSK, Single User, Full Rate",0,0,6,0,0,0,0,0,7,0,62,0,1,15,19200,-300,1,13904,0,7,3,"21, 336, 107","1, 41, 1","0, 1, 0",0,0,0,0,0,0,0
+22,3G_test_multichan_22,"HS-DSCH 16-QAM, Single User, Full Rate",3G_test_multichan_22,"HS-DSCH 16-QAM, Single User, Full Rate",0,0,6,0,0,0,1,0,7,0,62,0,1,15,28800,-300,1,27952,1,6,3,"21, 336, 43","1, 83, 1","0, 1, 0",0,0,0,0,0,0,0
+23,3G_test_multichan_23,"HS-DSCH QPSK (octet-aligned), Single User, Full Rate",3G_test_multichan_23,"HS-DSCH QPSK (octet-aligned), Single User, Full Rate",0,0,6,0,0,0,0,0,7,0,62,0,1,15,19200,-300,1,14168,0,0,3,"21, 336, 35","1, 42, 1","0, 1, 0",0,0,0,0,0,0,0
+24,3G_test_multichan_24,"HS-DSCH 16-QAM (octet-aligned), Single User, Full Rate",3G_test_multichan_24,"HS-DSCH 16-QAM (octet-aligned), Single User, Full Rate",0,0,6,0,0,0,1,0,7,0,62,0,1,15,28800,-300,1,28464,1,0,3,"21, 336, 219","1, 84, 1","0, 1, 0",0,0,0,0,0,0,0
+25,3G_test_multichan_25,"HS-DSCH 64-QAM (octet-aligned), Single User, Full Rate",3G_test_multichan_25,"HS-DSCH 64-QAM (octet-aligned), Single User, Full Rate",0,0,6,0,0,0,2,0,7,0,62,0,1,15,43200,-300,1,42192,2,7,3,"21, 336, 171","1, 125, 1","0, 1, 0",0,0,0,0,0,0,0
+26,3G_test_multichan_26,"HS-DSCH CDM, QPSK, 4 Users",3G_test_multichan_26,"HS-DSCH, QPSK",0,0,4,0,0,0,0,0,1,0,62,0,1,4,9600,-420,1,3695,0,5,3,"21, 336, 314","1, 10, 1","0, 1, 0",0,0,0,0,0,0,0
+26,,,3G_test_multichan_26,"HS-DSCH, QPSK",1,1,5,0,1,0,0,0,1,0,62,0,5,4,9600,-420,1,3695,0,5,3,"21, 336, 314","1, 10, 1","0, 1, 0",0,0,0,0,0,0,0
+26,,,3G_test_multichan_26,"HS-DSCH, QPSK",2,2,6,0,2,0,0,0,1,0,62,0,9,4,9600,-420,1,3695,0,5,3,"21, 336, 314","1, 10, 1","0, 1, 0",0,0,0,0,0,0,0
+26,,,3G_test_multichan_26,"HS-DSCH, QPSK",3,3,7,0,3,0,0,0,1,0,62,0,13,3,9600,-580,1,2775,0,5,3,"21, 336, 66","1, 8, 1","0, 1, 0",0,0,0,0,0,0,0
+27,3G_test_multichan_27,"HS-DSCH  (octet-aligned), 16QAM & 64QAM, 4 CDM Users",3G_test_multichan_27,"HS-DSCH (octet-aligned), 64-QAM",0,0,4,0,0,0,2,0,7,0,62,0,1,5,43200,-40,1,13920,2,1,3,"21, 336, 123","1, 41, 1","0, 1, 0",0,0,0,0,0,0,0
+27,,,3G_test_multichan_27,"HS-DSCH (octet-aligned), 64-QAM",1,1,5,0,1,0,2,0,7,0,62,0,6,5,43200,-40,1,13920,2,1,3,"21, 336, 123","1, 41, 1","0, 1, 0",0,0,0,0,0,0,0
+27,,,3G_test_multichan_27,"HS-DSCH (octet-aligned), 16-QAM",2,2,6,0,2,0,1,0,7,0,62,0,11,2,19200,-270,1,3704,1,6,3,"21, 336, 323","1, 10, 1","0, 1, 0",0,0,0,0,0,0,0
+27,,,3G_test_multichan_27,"HS-DSCH (octet-aligned), 16-QAM",3,3,7,0,3,0,1,0,7,0,62,0,13,3,19200,-50,1,5488,1,4,3,"21, 336, 91","1, 16, 1","0, 1, 0",0,0,0,0,0,0,0
+28,3G_test_multichan_28,"HS-DSCH  (octet-aligned), 16QAM & 64QAM, 4 CDM Users",3G_test_multichan_28,"HS-DSCH (octet-aligned), 64-QAM",0,0,4,0,0,0,2,0,7,0,62,0,1,7,43200,-460,1,19552,2,4,3,"21, 336, 43","1, 58, 1","0, 1, 0",0,0,0,0,0,0,0
+28,,,3G_test_multichan_28,"HS-DSCH (octet-aligned), 64-QAM",1,1,5,0,1,0,2,0,7,0,62,0,8,6,43200,-550,1,16648,2,3,3,"21, 336, 163","1, 49, 1","0, 1, 0",0,0,0,0,0,0,0
+28,,,3G_test_multichan_28,"HS-DSCH (octet-aligned), 64-QAM",2,2,6,0,2,0,2,0,7,0,62,0,14,1,9600,-330,1,2784,2,7,3,"21, 336, 75","1, 8, 1","0, 1, 0",0,0,0,0,0,0,0
+28,,,3G_test_multichan_28,"HS-DSCH (octet-aligned), 64-QAM",3,3,7,0,3,0,2,0,7,0,62,0,15,1,9600,-330,1,2784,2,7,3,"21, 336, 75","1, 8, 1","0, 1, 0",0,0,0,0,0,0,0
