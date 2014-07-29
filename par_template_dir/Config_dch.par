@@ -12,6 +12,7 @@ chanCodeIndex		    int         [4]
 Ch_SlotFormat		    int         [4]         //change
 chipOffset		      int         [0]
 frameOffset		      int         [0]
+CM_Active           int         [0]
 
 //TXDIV_ACTIVE,
 //TXDIV_INACTIVE

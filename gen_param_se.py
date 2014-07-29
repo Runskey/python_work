@@ -111,7 +111,7 @@ assert int(rangeLow) >= 0, 'invalid test range low'
 # initialize dictionary to index different channel types
 ch_dic = {\
           'dch'     :0, \
-          'hsscch'  :0, \
+          'sccpch'  :0, \
           'hspdsch' :0  \
           }
 

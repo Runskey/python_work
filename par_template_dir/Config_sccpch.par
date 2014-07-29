@@ -1,0 +1,136 @@
+VectorName          string      [3g_test_sccpch_1]     
+Description	        string      [stand-alone signalling rb for pcch]   
+
+//UE common parameters
+UserId              int         [0]
+CellId		          int         [0]
+PhyCh_Type          int         [3]
+TrCh_Type		        int         [132]
+
+scramblingCodeIndex	int         [0]
+chanCodeIndex		    int         [1]
+Ch_SlotFormat		    int         [4]    
+chipOffset		      int         [0]
+frameOffset		      int         [0]
+CM_Active           int         [0]
+   
+//TXDIV_ACTIVE,
+//TXDIV_INACTIVE
+diversityMode		    int         [1] 	
+DTXposition         int         [0]         //0: fix 1: flexible // change
+
+initialPower		    int         [-200]
+minPower		        int         [-400]
+maxPower		        int         [-50]
+
+//STEP_SIZE_0_5_DB,
+//STEP_SIZE_1_0_DB,
+//STEP_SIZE_1_5_DB,
+//STEP_SIZE_2_0_DB
+dlTpcStepSize       int         [0]  
+   
+//LIM_POW_INC_USED,
+//LIM_POW_INC_NOTUSED
+limitedPowerInc     int         [1] 
+  
+// INNER_LP_PC_STAT_ACTIVE,
+// INNER_LP_PC_STAT_INACTIVE    
+ilpcStatus          int         [1] 
+powerOffset1		    int         [0]
+powerOffset2		    int         [0]
+powerOffset3		    int         [0]
+
+////////////////////////////////////////////////////
+// Transport channels                             //
+////////////////////////////////////////////////////
+
+MaxTFCINum          int         [2]    
+TFCI                int         [1] 
+numTrCh             int         [1]     
+
+trch_0 ParamList
+{
+	 NumTfc           int         [2]   
+   NumTrBlks		    Array<int>  [0, 1]    
+   trBlkSizeA		    Array<int>  [240, 240]    
+   TFC              Array<int>  [0, 1]    
+   MaxTrBkwithinTFS	int         [240]   
+ 
+   TTI_value		    int         [1]   
+ 
+   CRC_length		    int         [3]   
+
+   Frame_Protocol   int         [0]
+   Encoder		      int         [2]   
+   RM_attribute		  int         [210]   
+}
+
+trch_1 ParamList
+{
+	 NumTfc           int         []
+   NumTrBlks		    Array<int>  []
+   trBlkSizeA		    Array<int>  []  
+   TFC              Array<int>  []
+   MaxTrBkwithinTFS	int         []
+   TTI_value		    int         []
+   CRC_length		    int         []
+   Frame_Protocol   int         [0]
+   Encoder		      int         []
+   RM_attribute		  int         []
+}
+
+trch_2 ParamList
+{
+	 NumTfc           int         []
+   NumTrBlks		    Array<int>  []
+   trBlkSizeA		    Array<int>  []  
+   TFC              Array<int>  []
+   MaxTrBkwithinTFS	int         []
+   TTI_value		    int         []
+   CRC_length		    int         []
+   Frame_Protocol   int         [0]
+   Encoder		      int         []
+   RM_attribute		  int         []
+}
+
+trch_3 ParamList
+{
+	 NumTfc           int         []
+   NumTrBlks		    Array<int>  []
+   trBlkSizeA		    Array<int>  []  
+   TFC              Array<int>  []
+   MaxTrBkwithinTFS	int         []
+   TTI_value		    int         []
+   CRC_length		    int         []
+   Frame_Protocol   int         [0]
+   Encoder		      int         []
+   RM_attribute		  int         []
+}
+
+trch_4 ParamList
+{
+	 NumTfc           int         []
+   NumTrBlks		    Array<int>  []
+   trBlkSizeA		    Array<int>  []  
+   TFC              Array<int>  []
+   MaxTrBkwithinTFS	int         []
+   TTI_value		    int         []
+   CRC_length		    int         []
+   Frame_Protocol   int         [0]
+   Encoder		      int         []
+   RM_attribute		  int         []
+}
+
+trch_5 ParamList
+{
+	 NumTfc           int         []
+   NumTrBlks		    Array<int>  []
+   trBlkSizeA		    Array<int>  []  
+   TFC              Array<int>  []
+   MaxTrBkwithinTFS	int         []
+   TTI_value		    int         []
+   CRC_length		    int         []
+   Frame_Protocol   int         [0]
+   Encoder		      int         []
+   RM_attribute		  int         []
+}

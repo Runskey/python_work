@@ -7,9 +7,10 @@ Description	        string      ["HS-DSCH QPSK Tranport Block Sizes (25.321 9.2.
 
 PhyCh_Type		      int         [9] 
 TrCh_Type		        int         [134] 
-cellId		          int         [0]
+CellId		          int         [0]
 resourceId		      int         [0]	        //change
 scramblingCodeIndex	int         [0]	        //change
+chipOffset          int         [0]
 chanCodeIndex       int         [6]
 
 ////////////////////////////////////////////////////
